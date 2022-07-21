@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+:root {
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--very-dark-blue);
+}
+
+.rating_card {
+    width: 90%;
+    margin: 0 auto;
+    background: linear-gradient(180deg, hsl(213, 19%, 14%) 50%, hsl(213, 19%, 12%) 100%);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.icon_star {
+    background-color: var(--dark-blue);
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.rating_card_title {
+    margin-bottom: 1rem;
+}
+
+.rating_card_text {
+    color: var(--light-grey);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.rating_card_list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.rating_list_item {
+    padding: 1rem 1.3rem;
+    background-color: var(--dark-blue);
+    color: var(--medium-grey);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.2s;
+}
+
+label {
+    cursor: pointer;
+}
+
+.rating_card_button {
+    width: 100%;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 0.75rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    border-radius: 2rem;
+    transition-duration: 0.2s;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.rating_card_submitted {
+    display: none;
+}
+
+.rating_card_submitted_top,
+.rating_card_submitted_bottom {
+    width: 100%;
+}
+
+.rating_card_submitted_img {
+    width: fit-content;
+    margin: 0 auto 1.5rem auto;
+}
+
+.rating_card_submitted_top_text {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0.5rem 0;
+    background-color: var(--dark-blue);
+    color: var(--orange);
+    border-radius: 2rem;
+    font-size: 0.85rem;
+}
+
+.submitted_bottom_title,
+.submitted_bottom_text {
+    text-align: center;
+}
+
+/* ----- HOVER ----- */
+
+.rating_list_item:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.rating_card_button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    cursor: pointer;
+}
+
+/* ----- SELECTED ----- */
+
+.selected {
+    background-color: var(--light-grey);
+    color: var(--white);
+}
+
+
+/* ----- MEDIA QUERIES -----*/
+
+@media all and (min-width: 500px) {
+    .rating_card {
+        width: 400px;
+    }
+}
