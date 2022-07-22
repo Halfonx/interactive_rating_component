@@ -93,6 +93,39 @@ input[type=radio] {
     display: none;
 }
 
+.loader_container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--very-dark-blue);
+    z-index: 999;
+}
+
+.loader_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75px;
+    height: 75px;
+    border: 10px solid var(--dark-blue);
+    border-top: 10px solid var(--orange);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: loader 1s infinite;
+}
+
+.loader_container.hidden {
+    display: none;
+}
+
+@keyframes loader {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg)
+    }
+}
+
 .rating_card_submitted {
     display: none;
 }
